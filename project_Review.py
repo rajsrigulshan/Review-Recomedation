@@ -6,7 +6,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 # reading data
 
-amazon_reviews = pd.read_csv('C:\\Users\\gulshan\\Desktop\\project competition\\AllProductReviews.csv')
+amazon_reviews = pd.read_csv('C:\\Users\\gulshan\\Desktop\\AllProductReviews.csv')
 amazon_reviews_lines = amazon_reviews.groupby('Product').count()
 amazon_reviews_lines = amazon_reviews_lines.sort_values(by=['ReviewTitle'], ascending=False)[:10]
 top_product_names = amazon_reviews_lines.index.values
